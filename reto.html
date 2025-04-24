@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafío SOCEISI</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    .hidden-clue::after {
+      content: "Pista: ejecuta 'unlockCode()' en la consola.";
+      color: #121212; /* invisible a simple vista */
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sociedad Científica de Estudiantes</h1>
+  <h2>Ingeniería en Sistemas - SOCEISI</h2>
+
+  <div id="message">==RQNOOiFbYWZzGR</div>
+  <p class="hidden-clue">Aquí no hay nada que ver...</p>
+
+  <div class="footer">Desafío académico SOCEISI - 2025</div>
+
+  <script>
+    function unlockCode() {
+      const coded = "==QRO90bpZWYzVGR";
+      const reversed = coded.split('').reverse().join('');
+      const decoded = atob(reversed);
+      alert("¡Mensaje descifrado!: " + decoded);
+    }
+  </script>
+  
+
+</body>
+</html>
